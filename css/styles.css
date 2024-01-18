@@ -1,0 +1,532 @@
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	height: 726px;
+	margin-top: 125px;
+    margin-left: 121px;
+}
+@media only screen and (max-width: 1200px) {
+    #selector-visual {
+        display: none !important;
+    }
+
+    #selector-grafico {
+        flex-basis: 100%;
+    }
+}
+.lista-patologias {
+
+    width: 423px;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5em;
+    list-style: none;
+}
+.lista-patologias:first-child{
+	margin-top: 0;
+    padding-top: 0;
+}
+
+.dropdown {
+	background: #f5f5f5;
+    font-size: 25px;
+    font-family: Poppins;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin: 5px 0 5px 0;
+    font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #0b3c77;
+
+}
+.dropdown>div{
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	cursor: pointer;
+}
+.vector{
+  margin-left: 1em;
+  margin-right: 0.4em;
+}
+.vector-white{
+	display: none;
+	margin-left: 0em;
+  	margin-right: 0em;
+}
+.dropdown-activo .dropdown-text {
+    color: #ffffff;
+    transition: 0.5s all ease;
+
+}
+.dropdown-activo > div{
+	background: #0b3c77;
+}
+.dropdown-activo > div  .vector{
+	display:none;
+}
+.dropdown-activo > div .vector-white{
+	display: inline;
+	margin-left: 1em;
+  	margin-right: 0.4em;
+}
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    list-style: none;
+    padding: 0 30px;
+}
+
+.submenu li {
+    margin: 5px 0;
+    text-align: justify;
+}
+
+.submenu li:hover {
+    margin: 5px 0;
+}
+
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s ease all;
+}
+
+.submenu a:hover {
+    color: #1c80b6;
+}
+
+
+/* CONSTRUCCIÓN DE SELECTOR VISUAL */
+
+#imagen-ref {
+    visibility: hidden;
+    max-width: 100%;
+    height: auto;
+}
+#imagen-ref2 {
+    visibility: hidden;
+    max-width: 100%;
+    height: auto;
+}
+#selector-visual {
+    display: inline-block;
+    height: 726px;
+    position: relative;
+    background-image: url("../img/man/back.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 148px;
+}#selector-visual2 {
+    display: inline-block;
+    height: 726px;
+    position: relative;
+    background-image: url("../img/man/front.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 139px;
+}
+
+#selector-visual-child{
+    display: inline-block;
+    height: 480px;
+    position: relative;
+    background-image: url(../img/child/side.png)!important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 148px;
+    margin-top:200px;
+}
+#selector-visual-child2{
+    display: inline-block;
+    height: 480px;
+    position: relative;
+    background-image: url(../img/child/front.png)!important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 117px;
+    margin-top:200px;
+}
+
+/* ESTILO DE SELECTORES DE ZONA */
+
+#zonas-patologias,#zonas-patologias2,#zonas-patologias-child,#zonas-patologias-child2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+}
+
+#zonas-patologias li,#zonas-patologias2 li,#zonas-patologias-child li,#zonas-patologias-child2 li{
+    position: absolute;
+    cursor: pointer;
+    
+    border-radius: 100%;
+    transition: 0.3s all ease;
+}
+
+#zonas-patologias li:hover,
+#zonas-patologias2 li:hover,
+#zonas-patologias-child li:hover,
+#zonas-patologias-child2 li:hover,
+ .zona-activa {
+    background-color: #ca0808;
+    opacity: 0.6;
+    box-shadow: 0 0 5px 10px #ca0808;
+}
+#cervicales {
+	width: 40px;
+	height: 40px;	
+	top: 10.5%;
+    left: 41%;
+}
+#cervicales:hover{
+	width: 40px;
+	height: 40px;	
+}
+#cervicales-child {
+	width: 12px;
+    height: 12px;
+    top: 29%;
+    left: 5%;
+}
+
+#cervicales-child:hover{
+	width: 12px;
+	height: 12px;	
+}
+#lumbares{
+	width: 62px;
+    height: 45px;
+    top: 36.5%;
+    left: 36%;
+}
+#lumbares:hover{
+	width: 62px;
+    height: 45px;	
+}
+#codo-izquierdo{
+	width: 12px;
+    height: 12px;
+    top: 35%;
+    left: 6%;
+}
+#codo-izquierdo:hover{
+	width: 12px;
+    height: 12px;	
+}
+#codo-derecho{
+	width: 12px;
+    height: 12px;
+    top: 35%;
+    left: 88%;
+}
+#codo-derecho:hover{
+	width: 12px;
+    height: 12px;	
+}
+#codos-child{
+	width: 6px;
+    height: 6px;
+    top: 40%;
+    left: 38%
+}
+#codos-child:hover{
+	width: 6px;
+    height: 6px;	
+}
+
+#tobillo-izquierdo{
+	width: 8px;
+    height: 8px;
+    top: 93%;
+    left: 41%;
+}
+#tobillo-izquierdo:hover{
+	width: 8px;
+    height: 8px;	
+}
+#tobillo-derecho{
+	width: 8px;
+    height: 8px;
+    top: 93%;
+    left: 53%;
+}
+#tobillo-derecho:hover{
+	width: 8px;
+    height: 8px;	
+}
+
+#tobillo-izquierdo-child{
+	width: 6px;
+    height: 6px;
+    top: 93%;
+    left: 35%;
+}
+#tobillo-izquierdo-child:hover{
+	width: 6px;
+    height: 6px;	
+}
+#tobillo-derecho-child{
+	width: 6px;
+    height: 6px;
+    top: 93%;
+    left: 59%;
+}
+#tobillo-derecho-child:hover{
+	width: 6px;
+    height: 6px;	
+}
+
+#muñeca-izquierda{
+	width: 4px;
+    height: 4px;
+    top: 46%;
+    left: 4%;
+}
+#muñeca-izquierda:hover{
+	width: 4px;
+    height: 4px;	
+}
+#muñeca-derecha{
+	width: 4px;
+    height: 4px;
+    top: 46%;
+    left: 92%;
+}
+#muñeca-derecha:hover{
+	width: 4px;
+    height: 4px;	
+}
+
+#muñecas-child{
+	width: 4px;
+    height: 4px;
+    top: 53%;
+    left: 55%;
+}
+#muñecas-child:hover{
+	width: 4px;
+    height: 4px;	
+}
+
+
+#cabeza{
+	width: 30px;
+	height: 30px;
+	top: 2%;
+	left: 43%;
+}
+#cabeza:hover{
+	width: 30px;
+	height: 30px;
+}
+#cabeza-child{
+	width: 30px;
+    height: 30px;
+    top: 4%;
+    left: 39%;
+}
+#cabeza-child:hover{
+	width: 30px;
+	height: 30px;
+}
+#hombro-izquierdo{
+	width: 30px;
+	height: 30px;
+	top: 17%;
+	left: 78%;
+}
+#hombro-izquierdo:hover{
+	width: 30px;
+	height: 30px;
+}
+#hombro-derecho{
+	width: 30px;
+	height: 30px;
+	top: 17%;
+	left: 7%;
+}
+#hombro-derecho:hover{
+	width: 30px;
+	height: 30px;
+}
+
+#hombro-izquierdo-child{
+	width: 16px;
+	height: 16px;
+	top: 24%;
+	left: 78%;
+}
+#hombro-izquierdo-child:hover{
+	width: 16px;
+	height: 16px;
+}
+#hombro-derecho-child{
+	width: 16px;
+    height: 16px;
+    top: 24%;
+    left: 10%;
+}
+#hombro-derecho-child:hover{
+	width: 16px;
+	height: 16px;
+}
+
+#cintura{
+    width: 92px;
+    height: 30px;
+    top: 34%;
+    left: 29%;
+}
+}
+#cintura:hover{
+	width: 92px;
+    height: 30px;
+}
+#cintura-child{
+    width: 72px;
+    height: 20px;
+    top: 37.5%;
+    left: 24%;
+}
+}
+#cintura-child:hover{
+	width: 72px;
+    height: 20px;
+}
+
+#cadera-izquierda{
+	width: 30px;
+	height: 30px;
+	top: 43%;
+	left: 69%;
+}
+#cadera-izquierda:hover{
+	width: 30px;
+	height: 30px;
+}
+#cadera-derecha{
+	width: 30px;
+	height: 30px;
+	top: 43%;
+	left: 17%;
+}
+#cadera-derecha:hover{
+	width: 30px;
+	height: 30px;
+}
+
+#cadera-izquierda-child{
+	width: 16px;
+	height: 16px;
+	top: 50%;
+	left: 68%;
+}
+#cadera-izquierda-child:hover{
+	width: 16px;
+	height: 16px;
+}
+#cadera-derecha-child{
+	width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 20%;
+}
+#cadera-derecha-child:hover{
+	width: 16px;
+	height: 16px;
+}
+
+#mano-izquierda{
+	width: 18px;
+	height: 18px;
+	top: 52%;
+	left: 89%;
+}
+#mano-izquierda:hover{
+	width: 18px;
+	height: 18px;
+}
+#mano-derecha{
+	width: 18px;
+	height: 18px;
+	top: 52%;
+	left: 2%;
+}
+#mano-derecha:hover{
+	width: 18px;
+	height: 18px;
+}
+#rodilla-izquierda{
+	width: 26px;
+	height: 26px;
+	top: 68%;
+	left: 54%;
+}
+#rodilla-izquierda:hover{
+	width: 18px;
+	height: 18px;
+}
+#rodilla-derecha{
+	width: 26px;
+	height: 26px;
+	top: 68%;
+	left: 33%;
+}
+#rodilla-derecha:hover{
+	width: 26px;
+	height: 26px;
+}
+#rodilla-izquierda-child{
+	width: 14px;
+	height: 14px;
+	top: 72%;
+	left: 59%;
+}
+#rodilla-izquierda-child:hover{
+	width: 18px;
+	height: 18px;
+}
+#rodilla-derecha-child{
+	width: 14px;
+	height: 14px;
+	top: 72%;
+	left: 31%;
+}
+#rodilla-derecha-child:hover{
+	width: 14px;
+	height: 14px;
+}
+#pie-izquierdo{
+	width: 26px;
+	height: 26px;
+	top: 96%;
+	left: 54%;
+}
+#pie-izquierdo:hover{
+	width: 18px;
+	height: 18px;
+}
+#pie-derecho{
+	width: 26px;
+	height: 26px;
+	top: 96%;
+	left: 33%;
+}
+#pie-derecho:hover{
+	width: 26px;
+	height: 26px;
+}
